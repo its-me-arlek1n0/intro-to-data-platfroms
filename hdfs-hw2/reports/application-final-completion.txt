@@ -1,0 +1,27 @@
+2026-10-10 18:55:46,672 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at team-11-nn/10.11.0.11:8032
+2026-10-10 18:55:47,261 INFO conf.Configuration: resource-types.xml not found
+2026-10-10 18:55:47,262 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+Application Report : 
+	Application-Id : application_1791651367496_0002
+	Application-Name : word count
+	Application-Type : MAPREDUCE
+	User : team
+	Queue : root.default
+	Application Priority : 0
+	Start-Time : 1791658385645
+	Finish-Time : 1791658405326
+	Progress : 100%
+	State : FINISHED
+	Final-State : SUCCEEDED
+	Tracking-URL : http://team-11-nn:19888/jobhistory/job/job_1791651367496_0002
+	RPC Port : 45881
+	AM Host : team-11-00
+	Aggregate Resource Allocation : 18829 MB-seconds, 35 vcore-seconds
+	Aggregate Resource Preempted : 0 MB-seconds, 0 vcore-seconds
+	Log Aggregation Status : SUCCEEDED
+	Diagnostics : 
+	Unmanaged Application : false
+	Application Node Label Expression : <Not set>
+	AM container Node Label Expression : <DEFAULT_PARTITION>
+	TimeoutType : LIFETIME	ExpiryTime : UNLIMITED	RemainingTime : -1seconds
+

@@ -1,0 +1,72 @@
+[
+  {
+    "Id": "namenode",
+    "Service": "NameNode",
+    "Url": "http://127.0.0.1:9870/dfshealth.html",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "secondarynamenode",
+    "Service": "SecondaryNameNode",
+    "Url": "http://127.0.0.1:19868/status.html",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "datanode-edge",
+    "Service": "DataNode",
+    "Url": "http://127.0.0.1:19864/datanode.html",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "datanode-00",
+    "Service": "DataNode",
+    "Url": "http://127.0.0.1:19865/datanode.html",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "datanode-01",
+    "Service": "DataNode",
+    "Url": "http://127.0.0.1:19866/datanode.html",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "resourcemanager",
+    "Service": "ResourceManager",
+    "Url": "http://127.0.0.1:8088/cluster",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "nodemanager-nn",
+    "Service": "NodeManager",
+    "Url": "http://127.0.0.1:18042/node",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "nodemanager-00",
+    "Service": "NodeManager",
+    "Url": "http://127.0.0.1:18043/node",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "nodemanager-01",
+    "Service": "NodeManager",
+    "Url": "http://127.0.0.1:18044/node",
+    "Ok": true,
+    "Status": 200
+  },
+  {
+    "Id": "historyserver",
+    "Service": "JobHistoryServer",
+    "Url": "http://127.0.0.1:19888/jobhistory",
+    "Ok": true,
+    "Status": 200
+  }
+]

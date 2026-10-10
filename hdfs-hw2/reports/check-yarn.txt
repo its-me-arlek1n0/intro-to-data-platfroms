@@ -1,0 +1,20 @@
+team-11-00:42783	        RUNNING	  team-11-00:8042	                           0
+team-11-01:39329	        RUNNING	  team-11-01:8042	                           0
+team-11-nn:36561	        RUNNING	  team-11-nn:8042	                           0
+Live datanodes (3):
+Hostname: team-11-en
+Hostname: team-11-00
+Hostname: team-11-01
+Connecting to namenode via http://team-11-nn:9870/fsck?ugi=team&path=%2F
+Status: HEALTHY
+active
+NameNode (team-11-nn): http://127.0.0.1:9870/dfshealth.html — доступен
+SecondaryNameNode (team-11-en): http://127.0.0.1:19868/status.html — доступен
+DataNode (team-11-en): http://127.0.0.1:19864/datanode.html — доступен
+DataNode (team-11-00): http://127.0.0.1:19865/datanode.html — доступен
+DataNode (team-11-01): http://127.0.0.1:19866/datanode.html — доступен
+ResourceManager (team-11-nn): http://127.0.0.1:8088/cluster — доступен
+NodeManager (team-11-nn): http://127.0.0.1:18042/node — доступен
+NodeManager (team-11-00): http://127.0.0.1:18043/node — доступен
+NodeManager (team-11-01): http://127.0.0.1:18044/node — доступен
+curl: (52) Empty reply from server
