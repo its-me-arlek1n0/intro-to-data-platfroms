@@ -1,0 +1,5 @@
+reports/
+*.swp
+*.swo
+*~
+__pycache__/

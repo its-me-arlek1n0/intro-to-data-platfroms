@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <property><name>yarn.resourcemanager.hostname</name><value>team-11-nn</value></property>
+  <property><name>yarn.resourcemanager.webapp.address</name><value>team-11-nn:8088</value></property>
+  <property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property>
+  <property><name>yarn.nodemanager.env-whitelist</name><value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value></property>
+  <property><name>yarn.nodemanager.local-dirs</name><value>/opt/hadoop/data/yarn/local</value></property>
+  <property><name>yarn.nodemanager.log-dirs</name><value>/opt/hadoop/data/yarn/logs</value></property>
+  <property><name>yarn.nodemanager.resource.memory-mb</name><value>1536</value></property>
+  <property><name>yarn.nodemanager.resource.cpu-vcores</name><value>2</value></property>
+  <property><name>yarn.scheduler.minimum-allocation-mb</name><value>512</value></property>
+  <property><name>yarn.scheduler.maximum-allocation-mb</name><value>1536</value></property>
+  <property><name>yarn.scheduler.maximum-allocation-vcores</name><value>2</value></property>
+  <!-- JVM reserves large virtual address ranges; physical memory checks stay enabled. -->
+  <property><name>yarn.nodemanager.vmem-check-enabled</name><value>false</value></property>
+  <property><name>yarn.log-aggregation-enable</name><value>true</value></property>
+  <property><name>yarn.nodemanager.remote-app-log-dir</name><value>/user/team/hdfs-hw2/logs</value></property>
+  <property><name>yarn.log.server.url</name><value>http://team-11-nn:19888/jobhistory/logs</value></property>
+</configuration>
