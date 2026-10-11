@@ -6,7 +6,7 @@ HADOOP_HOME="/opt/hadoop"
 DATA_DIR="/opt/hadoop/data"
 TARBALL_LOCAL="${1:-/tmp/hadoop-${HADOOP_VERSION}.tar.gz}"
 
-if ! command -v java >/dev/null 2>&1; then
+if [ ! -x /usr/lib/jvm/java-11-openjdk-amd64/bin/java ]; then
   sudo apt-get update -qq
   sudo apt-get install -y -qq openjdk-11-jre-headless
 fi
@@ -20,7 +20,7 @@ fi
 sudo mkdir -p "${DATA_DIR}/namenode" "${DATA_DIR}/datanode" /opt/hadoop/logs
 sudo chown -R team:team "${DATA_DIR}" /opt/hadoop/logs
 
-JAVA_HOME_DIR="$(dirname "$(dirname "$(readlink -f "$(command -v java)")")")"
+JAVA_HOME_DIR="/usr/lib/jvm/java-11-openjdk-amd64"
 sudo tee /etc/profile.d/hadoop.sh >/dev/null <<EOF
 export JAVA_HOME=${JAVA_HOME_DIR}
 export HADOOP_HOME=${HADOOP_HOME}

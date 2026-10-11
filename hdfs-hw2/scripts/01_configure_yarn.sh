@@ -43,7 +43,7 @@ for node in $ALL_NODES; do
         echo "source /opt/hadoop/etc/hadoop/hw2-env.sh" >> "$file"
     done
     mkdir -p /opt/hadoop/data/yarn/local /opt/hadoop/data/yarn/logs
-    echo "Конфиги проверены и установлены"
+    echo "$(hostname -s): конфиги проверены и установлены"
   '
 done
 
