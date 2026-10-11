@@ -3,9 +3,9 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 source env.sh
 
-# NodeManager должны зарегистрироваться в ResourceManager.
+# NodeManager должны зарегистрироваться в ResourceManager
 for attempt in {1..15}; do
-  nodes=$(yarn node -list -all)
+  nodes=$(yarn node -list -states RUNNING)
   running=$(echo "$nodes" | awk '$2 == "RUNNING" {n++} END {print n+0}')
   total=$(echo "$nodes" | awk '$1 ~ /^Total/ {sub(".*:", "", $NF); print $NF}')
   if [ "$running" -eq 3 ] && [ "$total" = 3 ]; then break; fi
