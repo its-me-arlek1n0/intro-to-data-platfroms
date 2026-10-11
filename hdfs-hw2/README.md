@@ -22,6 +22,10 @@ bash deploy_yarn.sh
 
 Остановить YARN: `bash scripts/06_stop_yarn.sh --confirm` (HDFS и туннель не трогает).
 
+## Что лежит в `config/`
+
+Здесь лежат готовые конфиги и таблица веб-интерфейсов, которые `scripts/01_configure_yarn.sh` (запускаемый из `deploy_yarn.sh`) раскидывает по узлам — сами скрипты их не создают, а только читают. `yarn-site.xml` — где запускать ResourceManager и NodeManager, сколько памяти и ядер давать каждому узлу, куда складывать логи и как их потом показывать в JobHistoryServer. `mapred-site.xml` — что MapReduce-задачи должны выполняться на YARN, а не локально, где искать JobHistoryServer и куда в HDFS складывать staging и историю. `hw2-env.sh` — общие переменные окружения для демонов (пути, JAVA_HOME и т.п.), подключается на каждом узле. `resource-types.xml` — описание нестандартных ресурсов (GPU/FPGA); если их нет, файл пустой. `web-interfaces.tsv` — простая таблица «какой веб-интерфейс на каком узле и порту», по ней `scripts/04_publish_web.sh` поднимает туннели, а `scripts/05_check_yarn.sh` проверяет, что все страницы открываются.
+
 ## Откуда что берётся
 
 - Имена узлов, SSH-ключ, путь Hadoop — из `../hdfs-hw1/env.sh`.
