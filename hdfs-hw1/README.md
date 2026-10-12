@@ -15,8 +15,8 @@
 
 | Узел | IP | Роль |
 |---|---|---|
-| `team-11-en` | `10.11.0.10` | Edge Node, SecondaryNameNode, DataNode |
-| `team-11-nn` | `10.11.0.11` | NameNode |
+| `team-11-en` | `10.11.0.10` | Edge Node |
+| `team-11-nn` | `10.11.0.11` | NameNode, SecondaryNameNode, DataNode |
 | `team-11-00` | `10.11.0.12` | DataNode |
 | `team-11-01` | `10.11.0.13` | DataNode |
 
@@ -76,7 +76,7 @@ hdfs-hw1/
 ```xml
 <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://team-11-nn:9000</value>
+    <value>hdfs://team-11-nn:8020</value>
 </property>
 ```
 
@@ -96,7 +96,7 @@ hdfs-hw1/
 В нашем случае:
 
 ```text
-team-11-en
+team-11-nn
 team-11-00
 team-11-01
 ```
@@ -116,7 +116,7 @@ team-11-01
 
 ```bash
 ssh team@111.88.130.12
-cd hdfs-hw1
+cd ~/github-repo/hdfs-hw1
 ./deploy_all.sh
 ```
 ---
@@ -193,9 +193,9 @@ SecondaryNameNode
 
 Он проверяет:
 
-- наличие трех Live DataNode;
+- наличие трех действующих DataNode с ожидаемыми именами;
 - запущенные HDFS-демоны;
-- отсутствие критических ошибок в логах;
+- отсутствие критических ошибок в логах HDFS-демонов с момента последнего запуска;
 - возможность записать файл в HDFS и прочитать его обратно.
 
 Кластер считается успешно работающим, если NameNode видит три DataNode, в логах нет критических ошибок, а тестовая запись и чтение файла выполняются успешно.

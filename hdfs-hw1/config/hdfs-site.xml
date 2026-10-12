@@ -15,7 +15,7 @@
     </property>
     <property>
         <name>dfs.namenode.secondary.http-address</name>
-        <value>team-11-en:9868</value>
+        <value>team-11-nn:9868</value>
     </property>
     <property>
         <name>dfs.namenode.http-address</name>

@@ -14,4 +14,5 @@
   <property><name>mapreduce.map.java.opts</name><value>-Xmx256m</value></property>
   <property><name>mapreduce.reduce.java.opts</name><value>-Xmx256m</value></property>
   <property><name>mapreduce.task.io.sort.mb</name><value>64</value></property>
+  <property><name>mapreduce.client.submit.file.replication</name><value>2</value></property>
 </configuration>

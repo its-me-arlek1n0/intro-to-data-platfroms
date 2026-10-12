@@ -18,14 +18,19 @@ for node in $NODE_MANAGERS; do
   echo "$nodes" | awk -v host="$node" '$2 == "RUNNING" && index($1, host ":") == 1 {found=1} END {exit !found}'
 done
 
-# HDFS из дз1 должна продолжать работать
-report=$(hdfs dfsadmin -report)
-echo "$report" | grep -E 'Live datanodes|Dead datanodes|Hostname'
-echo "$report" | grep -q 'Live datanodes (3)'
-if echo "$report" | grep -Eq '^Dead datanodes \([1-9]'; then
-  echo "Есть недоступные DataNode"
-  exit 1
-fi
+# Проверяем три действующих DataNode и их имена.
+report=$(hdfs dfsadmin -report -live)
+normal=$(echo "$report" | grep -c '^Decommission Status : Normal$' || true)
+echo "Действующих DataNode: $normal"
+test "$normal" -eq 3
+for node in $DATANODES; do
+  echo "$report" | awk -v host="$node" '
+    /^Hostname:/ {expected = ($2 == host)}
+    /^Decommission Status/ && expected && $NF == "Normal" {found = 1}
+    END {exit !found}
+  '
+  echo "DataNode ($node): доступен"
+done
 hdfs fsck / | grep 'Status: HEALTHY'
 
 systemctl --user is-active hdfs-hw2-web.service

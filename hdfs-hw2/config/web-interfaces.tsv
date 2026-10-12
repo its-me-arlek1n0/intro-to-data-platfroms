@@ -1,7 +1,7 @@
 # id	service	host	backend_port	edge_port	page
 namenode	NameNode	team-11-nn	9870	9870	/dfshealth.html
-secondarynamenode	SecondaryNameNode	team-11-en	9868	19868	/status.html
-datanode-edge	DataNode	team-11-en	9864	19864	/datanode.html
+secondarynamenode	SecondaryNameNode	team-11-nn	9868	19868	/status.html
+datanode-nn	DataNode	team-11-nn	9864	19864	/datanode.html
 datanode-00	DataNode	team-11-00	9864	19865	/datanode.html
 datanode-01	DataNode	team-11-01	9864	19866	/datanode.html
 resourcemanager	ResourceManager	team-11-nn	8088	8088	/cluster

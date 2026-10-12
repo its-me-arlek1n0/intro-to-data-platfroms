@@ -27,7 +27,7 @@ for node in $ALL_NODES; do
   '
 done
 
-# Теперь сохраняем старые настройки и устанавливаем только конфиги второго ДЗ.
+# Устанавливаем только конфиги второго ДЗ.
 for node in $ALL_NODES; do
   $SSH "$SSH_USER@$node" '
     set -e

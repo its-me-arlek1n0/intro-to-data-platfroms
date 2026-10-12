@@ -4,8 +4,8 @@ SSH_OPTS="-i $SSH_KEY -o StrictHostKeyChecking=accept-new -o ConnectTimeout=5"
 SSH="ssh $SSH_OPTS"
 
 NAMENODE="team-11-nn"
-SECONDARY_NN="team-11-en"
-DATANODES="team-11-en team-11-00 team-11-01"
+SECONDARY_NN="team-11-nn"
+DATANODES="team-11-nn team-11-00 team-11-01"
 ALL_NODES="team-11-en team-11-nn team-11-00 team-11-01"
 
 HADOOP_VERSION="3.4.2"

@@ -7,16 +7,18 @@
 **Используемые версии:**
 
 - Hadoop 3.4.2;
-- Java 11
+- Java 11.
 
 ## Архитектура кластера
 
 | Узел | IP | Роль |
 |---|---|---|
-| `team-11-en` | `10.11.0.10` | Edge Node, SecondaryNameNode, DataNode |
-| `team-11-nn` | `10.11.0.11` | NameNode, ResourceManager, NodeManager, JobHistoryServer |
+| `team-11-en` | `10.11.0.10` | Edge Node, SSH-туннель |
+| `team-11-nn` | `10.11.0.11` | NameNode, SecondaryNameNode, DataNode, ResourceManager, NodeManager, JobHistoryServer |
 | `team-11-00` | `10.11.0.12` | DataNode, NodeManager |
 | `team-11-01` | `10.11.0.13` | DataNode, NodeManager |
+
+Edge-нода используется для подключения к кластеру, запуска скриптов и доступа к веб-интерфейсам. HDFS-демоны на ней не запускаются.
 
 ResourceManager распределяет ресурсы кластера между приложениями. NodeManager запускает контейнеры на своём узле и сообщает ResourceManager об их состоянии.
 
@@ -130,6 +132,7 @@ source env.sh
 - адреса JobHistoryServer;
 - каталоги истории заданий в HDFS;
 - каталог временных файлов приложений;
+- репликацию файлов отправляемых заданий: две копии;
 - ограничения памяти ApplicationMaster, map- и reduce-задач.
 
 MapReduce используется для дополнительной проверки вычислений с помощью WordCount. Эта проверка запускается отдельно от основного развертывания.
@@ -331,8 +334,7 @@ systemctl --user status hdfs-hw2-web.service
 
 - наличие трёх NodeManager в состоянии `RUNNING`;
 - регистрацию ожидаемых узлов;
-- наличие трёх живых DataNode;
-- отсутствие недоступных DataNode;
+- наличие трёх живых DataNode со статусом `Normal` на ожидаемых узлах;
 - целостность HDFS;
 - работу сервиса SSH-туннеля;
 - доступность всех десяти веб-интерфейсов через edge.
@@ -480,8 +482,8 @@ bash client/open_web_tunnel.sh 111.88.130.12 ~/.ssh/id_ed25519
 | Служба | Узел | Адрес |
 |---|---|---|
 | NameNode | `team-11-nn` | http://127.0.0.1:9870/dfshealth.html |
-| SecondaryNameNode | `team-11-en` | http://127.0.0.1:19868/status.html |
-| DataNode | `team-11-en` | http://127.0.0.1:19864/datanode.html |
+| SecondaryNameNode | `team-11-nn` | http://127.0.0.1:19868/status.html |
+| DataNode | `team-11-nn` | http://127.0.0.1:19864/datanode.html |
 | DataNode | `team-11-00` | http://127.0.0.1:19865/datanode.html |
 | DataNode | `team-11-01` | http://127.0.0.1:19866/datanode.html |
 | ResourceManager | `team-11-nn` | http://127.0.0.1:8088/cluster |
