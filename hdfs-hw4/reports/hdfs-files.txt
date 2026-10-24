@@ -1,0 +1,9 @@
+-rw-r--r--   2 team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/_SUCCESS
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-01
+-rw-r--r--   2 team supergroup       1664 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-01/part-00000-7b9cdab4-c228-4f8b-bfb5-57279b8b8c1d.c000.snappy.parquet
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-02
+-rw-r--r--   2 team supergroup       1662 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-02/part-00000-7b9cdab4-c228-4f8b-bfb5-57279b8b8c1d.c000.snappy.parquet
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-03
+-rw-r--r--   2 team supergroup       1666 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-03/part-00000-7b9cdab4-c228-4f8b-bfb5-57279b8b8c1d.c000.snappy.parquet
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-04
+-rw-r--r--   2 team supergroup       1664 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-04/part-00000-7b9cdab4-c228-4f8b-bfb5-57279b8b8c1d.c000.snappy.parquet

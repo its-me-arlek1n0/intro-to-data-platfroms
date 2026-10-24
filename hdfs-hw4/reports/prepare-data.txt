@@ -1,0 +1,10 @@
+Загрузка данных в HDFS: /user/team/hw4/input
+Found 1 items
+-rw-r--r--   2 team supergroup     171467 2026-10-24 18:09 /user/team/hw4/input/events.csv
+Первые строки данных:
+event_id,user_id,event_type,product,price,quantity,dt
+1,57,cart,Laptop,890.96,1,2024-02-01
+2,173,purchase,Laptop,1204.86,2,2024-02-01
+3,151,refund,Tablet,1640.32,4,2024-02-01
+4,196,view,Laptop,1.05,2,2024-02-01
+Загрузка данных завершена

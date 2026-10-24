@@ -1,0 +1,24 @@
+Application Report : 
+	Application-Id : application_1791754171539_0017
+	Application-Name : hw4-events-etl
+	Application-Type : SPARK
+	User : team
+	Queue : root.default
+	Application Priority : 0
+	Start-Time : 1792865394525
+	Finish-Time : 1792865431885
+	Progress : 100%
+	State : FINISHED
+	Final-State : SUCCEEDED
+	Tracking-URL : N/A
+	RPC Port : -1
+	AM Host : 10.11.0.12
+	Aggregate Resource Allocation : 96399 MB-seconds, 93 vcore-seconds
+	Aggregate Resource Preempted : 0 MB-seconds, 0 vcore-seconds
+	Log Aggregation Status : RUNNING
+	Diagnostics : 
+	Unmanaged Application : false
+	Application Node Label Expression : <Not set>
+	AM container Node Label Expression : <DEFAULT_PARTITION>
+	TimeoutType : LIFETIME	ExpiryTime : UNLIMITED	RemainingTime : -1seconds
+

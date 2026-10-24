@@ -1,0 +1,60 @@
+Запуск Spark-приложения под управлением YARN
+26/10/24 18:09:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/24 18:09:36 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+YARN application ID: application_1791754171539_0017
+Spark master: yarn
+26/10/24 18:10:10 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+26/10/24 18:10:23 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+=== Преобразованные данные ===
++----------+----------+----------+------------+------------+---------+
+|dt        |event_type|events_cnt|unique_users|total_amount|avg_price|
++----------+----------+----------+------------+------------+---------+
+|2024-02-01|cart      |242       |194         |710069.4    |970.31   |
+|2024-02-01|purchase  |257       |204         |768946.55   |991.42   |
+|2024-02-01|refund    |269       |220         |805945.51   |990.39   |
+|2024-02-01|view      |232       |190         |662327.1    |965.19   |
+|2024-02-02|cart      |252       |195         |767219.95   |988.59   |
+|2024-02-02|purchase  |228       |183         |643230.46   |958.54   |
+|2024-02-02|refund    |269       |204         |799069.46   |957.74   |
+|2024-02-02|view      |251       |198         |775222.8    |1029.42  |
+|2024-02-03|cart      |264       |201         |750880.18   |962.09   |
+|2024-02-03|purchase  |245       |196         |768772.57   |1004.7   |
+|2024-02-03|refund    |241       |183         |716003.08   |994.1    |
+|2024-02-03|view      |250       |202         |712461.01   |1010.6   |
+|2024-02-04|cart      |257       |212         |787518.45   |1046.46  |
+|2024-02-04|purchase  |264       |215         |814683.92   |1005.54  |
+|2024-02-04|refund    |233       |185         |740571.29   |1041.61  |
+|2024-02-04|view      |246       |192         |712628.42   |985.62   |
++----------+----------+----------+------------+------------+---------+
+
+=== Таблица hw4.events_summary ===
++-------------+
+|partition    |
++-------------+
+|dt=2024-02-01|
+|dt=2024-02-02|
+|dt=2024-02-03|
+|dt=2024-02-04|
++-------------+
+
++----------+----------+------------+------------+---------+----------+
+|event_type|events_cnt|unique_users|total_amount|avg_price|dt        |
++----------+----------+------------+------------+---------+----------+
+|cart      |264       |201         |750880.18   |962.09   |2024-02-03|
+|purchase  |245       |196         |768772.57   |1004.7   |2024-02-03|
+|refund    |241       |183         |716003.08   |994.1    |2024-02-03|
+|view      |250       |202         |712461.01   |1010.6   |2024-02-03|
+|cart      |242       |194         |710069.4    |970.31   |2024-02-01|
+|purchase  |257       |204         |768946.55   |991.42   |2024-02-01|
+|refund    |269       |220         |805945.51   |990.39   |2024-02-01|
+|view      |232       |190         |662327.1    |965.19   |2024-02-01|
+|cart      |257       |212         |787518.45   |1046.46  |2024-02-04|
+|purchase  |264       |215         |814683.92   |1005.54  |2024-02-04|
++----------+----------+------------+------------+---------+----------+
+
+Идентификатор приложения в YARN: application_1791754171539_0017
+WARNING: YARN_CONF_DIR has been replaced by HADOOP_CONF_DIR. Using value of YARN_CONF_DIR.
+2026-10-24 18:10:33,813 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at team-11-nn/10.11.0.11:8032
+2026-10-24 18:10:34,392 INFO conf.Configuration: found resource resource-types.xml at file:/opt/hadoop-3.4.2/etc/hadoop/resource-types.xml
+Состояние приложения: FINISHED / SUCCEEDED
+Выполнение Spark-приложения завершено

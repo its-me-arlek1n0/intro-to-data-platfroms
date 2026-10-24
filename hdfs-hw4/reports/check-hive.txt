@@ -1,0 +1,265 @@
+Список таблиц базы hw4:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 4.0.0-alpha-2)
+Driver: Hive JDBC (version 4.0.0-alpha-2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+INFO  : Compiling command(queryId=team_20261024181039_1935fbd4-e041-4f04-8e72-c9136c64ec57): SHOW TABLES IN hw4
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=team_20261024181039_1935fbd4-e041-4f04-8e72-c9136c64ec57); Time taken: 0.021 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=team_20261024181039_1935fbd4-e041-4f04-8e72-c9136c64ec57): SHOW TABLES IN hw4
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=team_20261024181039_1935fbd4-e041-4f04-8e72-c9136c64ec57); Time taken: 0.023 seconds
++-----------------+
+|    tab_name     |
++-----------------+
+| events_summary  |
++-----------------+
+1 row selected (0.197 seconds)
+Beeline version 4.0.0-alpha-2 by Apache Hive
+Closing: 0: jdbc:hive2://localhost:10000
+Описание таблицы hw4.events_summary:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 4.0.0-alpha-2)
+Driver: Hive JDBC (version 4.0.0-alpha-2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+INFO  : Compiling command(queryId=team_20261024181044_768e9a12-0744-4ac0-a022-f1f9911e82af): DESCRIBE FORMATTED hw4.events_summary
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=team_20261024181044_768e9a12-0744-4ac0-a022-f1f9911e82af); Time taken: 0.03 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=team_20261024181044_768e9a12-0744-4ac0-a022-f1f9911e82af): DESCRIBE FORMATTED hw4.events_summary
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=team_20261024181044_768e9a12-0744-4ac0-a022-f1f9911e82af); Time taken: 0.06 seconds
+47 rows selected (0.226 seconds)
+Beeline version 4.0.0-alpha-2 by Apache Hive
+Closing: 0: jdbc:hive2://localhost:10000
+|           col_name            |                     data_type                      |                      comment                       |
+| event_type                    | string                                             |                                                    |
+| events_cnt                    | bigint                                             |                                                    |
+| unique_users                  | bigint                                             |                                                    |
+| total_amount                  | double                                             |                                                    |
+| avg_price                     | double                                             |                                                    |
+| # Partition Information       | NULL                                               | NULL                                               |
+| # col_name                    | data_type                                          | comment                                            |
+| dt                            | string                                             |                                                    |
+| Location:                     | hdfs://team-11-nn:8020/user/hive/warehouse/hw4.db/events_summary | NULL                                               |
+|                               | spark.sql.sources.schema                           | {\"type\":\"struct\",\"fields\":[{\"name\":\"event_type\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"events_cnt\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"unique_users\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_amount\",\"type\":\"double\",\"nullable\":true,\"metadata\":{}},{\"name\":\"avg_price\",\"type\":\"double\",\"nullable\":true,\"metadata\":{}},{\"name\":\"dt\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]} |
+|                               | spark.sql.sources.schema.partCol.0                 | dt                                                 |
+| InputFormat:                  | org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat | NULL                                               |
+Партиции таблицы:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 4.0.0-alpha-2)
+Driver: Hive JDBC (version 4.0.0-alpha-2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+INFO  : Compiling command(queryId=team_20261024181050_c1c9218d-3d1f-41c5-855f-ef308e5a2647): SHOW PARTITIONS hw4.events_summary
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:partition, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=team_20261024181050_c1c9218d-3d1f-41c5-855f-ef308e5a2647); Time taken: 0.031 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=team_20261024181050_c1c9218d-3d1f-41c5-855f-ef308e5a2647): SHOW PARTITIONS hw4.events_summary
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=team_20261024181050_c1c9218d-3d1f-41c5-855f-ef308e5a2647); Time taken: 0.011 seconds
++----------------+
+|   partition    |
++----------------+
+| dt=2024-02-01  |
+| dt=2024-02-02  |
+| dt=2024-02-03  |
+| dt=2024-02-04  |
++----------------+
+4 rows selected (0.126 seconds)
+Beeline version 4.0.0-alpha-2 by Apache Hive
+Closing: 0: jdbc:hive2://localhost:10000
+Чтение данных через Hive:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 4.0.0-alpha-2)
+Driver: Hive JDBC (version 4.0.0-alpha-2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+INFO  : Compiling command(queryId=team_20261024181055_8c2e0e2f-5616-448e-98ca-8079dd693829): SELECT * FROM hw4.events_summary ORDER BY dt, event_type LIMIT 12
+INFO  : No Stats for hw4@events_summary, Columns: unique_users, event_type, total_amount, avg_price, events_cnt
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:events_summary.event_type, type:string, comment:null), FieldSchema(name:events_summary.events_cnt, type:bigint, comment:null), FieldSchema(name:events_summary.unique_users, type:bigint, comment:null), FieldSchema(name:events_summary.total_amount, type:double, comment:null), FieldSchema(name:events_summary.avg_price, type:double, comment:null), FieldSchema(name:events_summary.dt, type:string, comment:null)], properties:null)
+INFO  : Completed compiling command(queryId=team_20261024181055_8c2e0e2f-5616-448e-98ca-8079dd693829); Time taken: 0.382 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=team_20261024181055_8c2e0e2f-5616-448e-98ca-8079dd693829): SELECT * FROM hw4.events_summary ORDER BY dt, event_type LIMIT 12
+WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez) or using Hive 1.X releases.
+INFO  : Query ID = team_20261024181055_8c2e0e2f-5616-448e-98ca-8079dd693829
+INFO  : Total jobs = 1
+INFO  : Launching Job 1 out of 1
+INFO  : Starting task [Stage-1:MAPRED] in serial mode
+INFO  : Number of reduce tasks determined at compile time: 1
+INFO  : In order to change the average load for a reducer (in bytes):
+INFO  :   set hive.exec.reducers.bytes.per.reducer=<number>
+INFO  : In order to limit the maximum number of reducers:
+INFO  :   set hive.exec.reducers.max=<number>
+INFO  : In order to set a constant number of reducers:
+INFO  :   set mapreduce.job.reduces=<number>
+INFO  : number of splits:2
+INFO  : Submitting tokens for job: job_1791754171539_0018
+INFO  : Executing with tokens: []
+INFO  : The url to track the job: http://team-11-nn:8088/proxy/application_1791754171539_0018/
+INFO  : Starting Job = job_1791754171539_0018, Tracking URL = http://team-11-nn:8088/proxy/application_1791754171539_0018/
+INFO  : Kill Command = /opt/hadoop/bin/mapred job  -kill job_1791754171539_0018
+INFO  : Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+INFO  : 2026-10-24 18:11:05,377 Stage-1 map = 0%,  reduce = 0%
+INFO  : 2026-10-24 18:11:17,958 Stage-1 map = 50%,  reduce = 0%, Cumulative CPU 3.79 sec
+INFO  : 2026-10-24 18:11:18,991 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 7.57 sec
+INFO  : 2026-10-24 18:11:26,237 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 10.07 sec
+INFO  : MapReduce Total cumulative CPU time: 10 seconds 70 msec
+INFO  : Ended Job = job_1791754171539_0018
+INFO  : MapReduce Jobs Launched: 
+INFO  : Stage-Stage-1: Map: 2  Reduce: 1   Cumulative CPU: 10.07 sec   HDFS Read: 34009 HDFS Write: 738 HDFS EC Read: 0 SUCCESS
+INFO  : Total MapReduce CPU Time Spent: 10 seconds 70 msec
+INFO  : Completed executing command(queryId=team_20261024181055_8c2e0e2f-5616-448e-98ca-8079dd693829); Time taken: 31.425 seconds
++----------------------------+----------------------------+------------------------------+------------------------------+---------------------------+--------------------+
+| events_summary.event_type  | events_summary.events_cnt  | events_summary.unique_users  | events_summary.total_amount  | events_summary.avg_price  | events_summary.dt  |
++----------------------------+----------------------------+------------------------------+------------------------------+---------------------------+--------------------+
+| cart                       | 242                        | 194                          | 710069.4                     | 970.31                    | 2024-02-01         |
+| purchase                   | 257                        | 204                          | 768946.55                    | 991.42                    | 2024-02-01         |
+| refund                     | 269                        | 220                          | 805945.51                    | 990.39                    | 2024-02-01         |
+| view                       | 232                        | 190                          | 662327.1                     | 965.19                    | 2024-02-01         |
+| cart                       | 252                        | 195                          | 767219.95                    | 988.59                    | 2024-02-02         |
+| purchase                   | 228                        | 183                          | 643230.46                    | 958.54                    | 2024-02-02         |
+| refund                     | 269                        | 204                          | 799069.46                    | 957.74                    | 2024-02-02         |
+| view                       | 251                        | 198                          | 775222.8                     | 1029.42                   | 2024-02-02         |
+| cart                       | 264                        | 201                          | 750880.18                    | 962.09                    | 2024-02-03         |
+| purchase                   | 245                        | 196                          | 768772.57                    | 1004.7                    | 2024-02-03         |
+| refund                     | 241                        | 183                          | 716003.08                    | 994.1                     | 2024-02-03         |
+| view                       | 250                        | 202                          | 712461.01                    | 1010.6                    | 2024-02-03         |
++----------------------------+----------------------------+------------------------------+------------------------------+---------------------------+--------------------+
+12 rows selected (31.905 seconds)
+Beeline version 4.0.0-alpha-2 by Apache Hive
+Closing: 0: jdbc:hive2://localhost:10000
+Агрегация через Hive поверх созданной таблицы:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/team/opt/apache-hive-4.0.0-alpha-2-bin/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.4.2/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 4.0.0-alpha-2)
+Driver: Hive JDBC (version 4.0.0-alpha-2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+INFO  : Compiling command(queryId=team_20261024181132_6cf6818d-3e0d-4fc2-b7c2-79ff19db755a): SELECT dt, SUM(total_amount) AS day_amount FROM hw4.events_summary GROUP BY dt ORDER BY dt
+INFO  : No Stats for hw4@events_summary, Columns: total_amount
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:dt, type:string, comment:null), FieldSchema(name:day_amount, type:double, comment:null)], properties:null)
+INFO  : Completed compiling command(queryId=team_20261024181132_6cf6818d-3e0d-4fc2-b7c2-79ff19db755a); Time taken: 0.412 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=team_20261024181132_6cf6818d-3e0d-4fc2-b7c2-79ff19db755a): SELECT dt, SUM(total_amount) AS day_amount FROM hw4.events_summary GROUP BY dt ORDER BY dt
+WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez) or using Hive 1.X releases.
+INFO  : Query ID = team_20261024181132_6cf6818d-3e0d-4fc2-b7c2-79ff19db755a
+INFO  : Total jobs = 2
+INFO  : Launching Job 1 out of 2
+INFO  : Starting task [Stage-1:MAPRED] in serial mode
+INFO  : Number of reduce tasks not specified. Estimated from input data size: 1
+INFO  : In order to change the average load for a reducer (in bytes):
+INFO  :   set hive.exec.reducers.bytes.per.reducer=<number>
+INFO  : In order to limit the maximum number of reducers:
+INFO  :   set hive.exec.reducers.max=<number>
+INFO  : In order to set a constant number of reducers:
+INFO  :   set mapreduce.job.reduces=<number>
+INFO  : number of splits:2
+INFO  : Submitting tokens for job: job_1791754171539_0019
+INFO  : Executing with tokens: []
+INFO  : The url to track the job: http://team-11-nn:8088/proxy/application_1791754171539_0019/
+INFO  : Starting Job = job_1791754171539_0019, Tracking URL = http://team-11-nn:8088/proxy/application_1791754171539_0019/
+INFO  : Kill Command = /opt/hadoop/bin/mapred job  -kill job_1791754171539_0019
+INFO  : Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+INFO  : 2026-10-24 18:11:42,913 Stage-1 map = 0%,  reduce = 0%
+INFO  : 2026-10-24 18:11:57,596 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 7.42 sec
+INFO  : 2026-10-24 18:12:06,830 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 9.86 sec
+INFO  : MapReduce Total cumulative CPU time: 9 seconds 860 msec
+INFO  : Ended Job = job_1791754171539_0019
+INFO  : Launching Job 2 out of 2
+INFO  : Starting task [Stage-2:MAPRED] in serial mode
+INFO  : Number of reduce tasks determined at compile time: 1
+INFO  : In order to change the average load for a reducer (in bytes):
+INFO  :   set hive.exec.reducers.bytes.per.reducer=<number>
+INFO  : In order to limit the maximum number of reducers:
+INFO  :   set hive.exec.reducers.max=<number>
+INFO  : In order to set a constant number of reducers:
+INFO  :   set mapreduce.job.reduces=<number>
+INFO  : number of splits:1
+INFO  : Submitting tokens for job: job_1791754171539_0020
+INFO  : Executing with tokens: []
+INFO  : The url to track the job: http://team-11-nn:8088/proxy/application_1791754171539_0020/
+INFO  : Starting Job = job_1791754171539_0020, Tracking URL = http://team-11-nn:8088/proxy/application_1791754171539_0020/
+INFO  : Kill Command = /opt/hadoop/bin/mapred job  -kill job_1791754171539_0020
+INFO  : Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+INFO  : 2026-10-24 18:12:21,892 Stage-2 map = 0%,  reduce = 0%
+INFO  : 2026-10-24 18:12:28,134 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.94 sec
+INFO  : 2026-10-24 18:12:35,360 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 4.32 sec
+INFO  : MapReduce Total cumulative CPU time: 4 seconds 320 msec
+INFO  : Ended Job = job_1791754171539_0020
+INFO  : MapReduce Jobs Launched: 
+INFO  : Stage-Stage-1: Map: 2  Reduce: 1   Cumulative CPU: 9.86 sec   HDFS Read: 34851 HDFS Write: 240 HDFS EC Read: 0 SUCCESS
+INFO  : Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 4.32 sec   HDFS Read: 9149 HDFS Write: 223 HDFS EC Read: 0 SUCCESS
+INFO  : Total MapReduce CPU Time Spent: 14 seconds 180 msec
+INFO  : Completed executing command(queryId=team_20261024181132_6cf6818d-3e0d-4fc2-b7c2-79ff19db755a); Time taken: 63.401 seconds
++-------------+-------------+
+|     dt      | day_amount  |
++-------------+-------------+
+| 2024-02-01  | 2947288.56  |
+| 2024-02-02  | 2984742.67  |
+| 2024-02-03  | 2948116.84  |
+| 2024-02-04  | 3055402.08  |
++-------------+-------------+
+4 rows selected (63.939 seconds)
+Beeline version 4.0.0-alpha-2 by Apache Hive
+Closing: 0: jdbc:hive2://localhost:10000
+Расположение партиций в HDFS:
+Found 5 items
+-rw-r--r--   2 team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/_SUCCESS
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-01
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-02
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-03
+drwxr-xr-x   - team supergroup          0 2026-10-24 18:10 /user/hive/warehouse/hw4.db/events_summary/dt=2024-02-04
+Проверка чтения через Hive завершена

@@ -1,0 +1,173 @@
+{
+  "checked_at_utc": "2026-10-24T18:11:55.074833+00:00",
+  "application_id": "application_1791754171539_0017",
+  "spark_master": "yarn",
+  "yarn_state": "FINISHED",
+  "yarn_final_status": "SUCCEEDED",
+  "hive_client": "/home/team/opt/apache-hive-4.0.0-alpha-2-bin/bin/beeline",
+  "input_path": "/user/team/hw4/input/events.csv",
+  "input_rows": 4000,
+  "valid_input_rows": 4000,
+  "table": "hw4.events_summary",
+  "summary_rows": 16,
+  "partition_count": 4,
+  "per_partition": {
+    "2024-02-01": {
+      "summary_rows": 4,
+      "source_events": 1000,
+      "total_amount": "2947288.56"
+    },
+    "2024-02-02": {
+      "summary_rows": 4,
+      "source_events": 1000,
+      "total_amount": "2984742.67"
+    },
+    "2024-02-03": {
+      "summary_rows": 4,
+      "source_events": 1000,
+      "total_amount": "2948116.84"
+    },
+    "2024-02-04": {
+      "summary_rows": 4,
+      "source_events": 1000,
+      "total_amount": "3055402.08"
+    }
+  },
+  "verified_metrics": [
+    "events_cnt",
+    "unique_users",
+    "total_amount",
+    "avg_price"
+  ],
+  "all_groups_match_source_csv": true,
+  "groups": [
+    {
+      "dt": "2024-02-01",
+      "event_type": "cart",
+      "events_cnt": 242,
+      "unique_users": 194,
+      "total_amount": "710069.4",
+      "avg_price": "970.31"
+    },
+    {
+      "dt": "2024-02-01",
+      "event_type": "purchase",
+      "events_cnt": 257,
+      "unique_users": 204,
+      "total_amount": "768946.55",
+      "avg_price": "991.42"
+    },
+    {
+      "dt": "2024-02-01",
+      "event_type": "refund",
+      "events_cnt": 269,
+      "unique_users": 220,
+      "total_amount": "805945.51",
+      "avg_price": "990.39"
+    },
+    {
+      "dt": "2024-02-01",
+      "event_type": "view",
+      "events_cnt": 232,
+      "unique_users": 190,
+      "total_amount": "662327.1",
+      "avg_price": "965.19"
+    },
+    {
+      "dt": "2024-02-02",
+      "event_type": "cart",
+      "events_cnt": 252,
+      "unique_users": 195,
+      "total_amount": "767219.95",
+      "avg_price": "988.59"
+    },
+    {
+      "dt": "2024-02-02",
+      "event_type": "purchase",
+      "events_cnt": 228,
+      "unique_users": 183,
+      "total_amount": "643230.46",
+      "avg_price": "958.54"
+    },
+    {
+      "dt": "2024-02-02",
+      "event_type": "refund",
+      "events_cnt": 269,
+      "unique_users": 204,
+      "total_amount": "799069.46",
+      "avg_price": "957.74"
+    },
+    {
+      "dt": "2024-02-02",
+      "event_type": "view",
+      "events_cnt": 251,
+      "unique_users": 198,
+      "total_amount": "775222.8",
+      "avg_price": "1029.42"
+    },
+    {
+      "dt": "2024-02-03",
+      "event_type": "cart",
+      "events_cnt": 264,
+      "unique_users": 201,
+      "total_amount": "750880.18",
+      "avg_price": "962.09"
+    },
+    {
+      "dt": "2024-02-03",
+      "event_type": "purchase",
+      "events_cnt": 245,
+      "unique_users": 196,
+      "total_amount": "768772.57",
+      "avg_price": "1004.7"
+    },
+    {
+      "dt": "2024-02-03",
+      "event_type": "refund",
+      "events_cnt": 241,
+      "unique_users": 183,
+      "total_amount": "716003.08",
+      "avg_price": "994.1"
+    },
+    {
+      "dt": "2024-02-03",
+      "event_type": "view",
+      "events_cnt": 250,
+      "unique_users": 202,
+      "total_amount": "712461.01",
+      "avg_price": "1010.6"
+    },
+    {
+      "dt": "2024-02-04",
+      "event_type": "cart",
+      "events_cnt": 257,
+      "unique_users": 212,
+      "total_amount": "787518.45",
+      "avg_price": "1046.46"
+    },
+    {
+      "dt": "2024-02-04",
+      "event_type": "purchase",
+      "events_cnt": 264,
+      "unique_users": 215,
+      "total_amount": "814683.92",
+      "avg_price": "1005.54"
+    },
+    {
+      "dt": "2024-02-04",
+      "event_type": "refund",
+      "events_cnt": 233,
+      "unique_users": 185,
+      "total_amount": "740571.29",
+      "avg_price": "1041.61"
+    },
+    {
+      "dt": "2024-02-04",
+      "event_type": "view",
+      "events_cnt": 246,
+      "unique_users": 192,
+      "total_amount": "712628.42",
+      "avg_price": "985.62"
+    }
+  ]
+}
